@@ -5,6 +5,8 @@
     <title>Array Cardio 💪</title>
   </head>
   <body>
+    <a href="/index.html">Assignment List</a>
+
     <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
     <script>
       // Get your shorts on - this is an array workout!
@@ -91,10 +93,36 @@
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
 
+      function bdaySort (a,b) {        
+        if (a.year > b.year) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+      const inventorsBday = inventors.sort(bdaySort);
+      console.log(inventorsBday);
+
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
 
+      reduceFn = (total, inventor) => (total + (inventor.passed - inventor.year))
+      
+      totalYears = inventors.reduce(reduceFn, 0);
+
+      console.log(totalYears);
+
       // 5. Sort the inventors by years lived
+
+      function yearsSort (a,b) {
+        if (a.passed - a.year > b.passed - b.year) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+      const inventorsYears = inventors.sort(yearsSort);
+      console.log(inventorsYears);
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
