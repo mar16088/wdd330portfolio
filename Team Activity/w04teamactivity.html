@@ -5,9 +5,28 @@
         <link rel="stylesheet" href="./style.css">
 
         <script>
+            const player1 = "X";
+            const player2 = "O";
+            let player = player1;
+
             function play(id) {
-                id.innerHTML = "x"
+                id.innerHTML = "player"
             }
+
+            document.getElementById('board').addEventListener('click', changePlayer);
+
+            function changePlayer(){
+                if(player == player1){
+                    player = player2;
+                }else{
+                    player = player1;
+                }
+            }
+
+            function reset(){
+                document.querySelectorAll(".cell").forEach((cell) => (cell.textContent = ""));
+            }
+            
         </script>
 
     </head>
@@ -23,6 +42,7 @@
             <div class="cell" id="cell6" onclick="play(this)"></div>
             <div class="cell" id="cell7" onclick="play(this)"></div>
             <div class="cell" id="cell8" onclick="play(this)"></div>
+            <button id="reset" onclick="reset()">Reset</button>
           </div>
 
     </body>
