@@ -4,7 +4,25 @@
 
         <link rel="stylesheet" href="./style.css">
 
-        <script>
+        
+
+    </head>
+    <body>
+
+        <div class="grid">
+            <div class="cell" id="cell0" onclick="play(this)"></div>
+            <div class="cell" id="cell1" onclick="play(this)"></div>
+            <div class="cell" id="cell2" onclick="play(this)"></div>
+            <div class="cell" id="cell3" onclick="play(this)"></div>
+            <div class="cell" id="cell4" onclick="play(this)"></div>
+            <div class="cell" id="cell5" onclick="play(this)"></div>
+            <div class="cell" id="cell6" onclick="play(this)"></div>
+            <div class="cell" id="cell7" onclick="play(this)"></div>
+            <div class="cell" id="cell8" onclick="play(this)"></div>
+            <button id="reset" onclick="reset()">Reset</button>
+          </div>
+
+          <script>
             const player1 = "X";
             const player2 = "O";
             let player = player1;
@@ -28,22 +46,5 @@
             }
             
         </script>
-
-    </head>
-    <body>
-
-        <div class="grid">
-            <div class="cell" id="cell0" onclick="play(this)"></div>
-            <div class="cell" id="cell1" onclick="play(this)"></div>
-            <div class="cell" id="cell2" onclick="play(this)"></div>
-            <div class="cell" id="cell3" onclick="play(this)"></div>
-            <div class="cell" id="cell4" onclick="play(this)"></div>
-            <div class="cell" id="cell5" onclick="play(this)"></div>
-            <div class="cell" id="cell6" onclick="play(this)"></div>
-            <div class="cell" id="cell7" onclick="play(this)"></div>
-            <div class="cell" id="cell8" onclick="play(this)"></div>
-            <button id="reset" onclick="reset()">Reset</button>
-          </div>
-
     </body>
 </html>
