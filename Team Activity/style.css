@@ -2,7 +2,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    height: 400px;
+    width: 400px;
 }
+
   
 div > div {
     padding: 10px;
