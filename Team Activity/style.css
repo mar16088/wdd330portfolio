@@ -7,6 +7,41 @@
 }
 
 .cell {
-    border: 2px solid black;
-    
+    border: 1px solid black;
+}
+
+div:nth-child(1){
+    border-top: none;
+    border-left: none;
+}
+div:nth-child(2){
+  border-top: none;
+  
+}
+div:nth-child(3){
+  border-top: none;
+  border-right: none;
+}
+div:nth-child(4){
+  border-left: none;
+}
+div:nth-child(6){
+  border-right: none;
+}
+div:nth-child(7){
+  border-left: none;
+  border-bottom: none;
+}
+div:nth-child(8){
+  border-bottom: none;
+}
+div:nth-child(9){
+  border-bottom: none;
+  border-right:none ;
+}
+div:nth-child(10){
+  border: none;
+}
+div.reset{
+border: none;
 }
