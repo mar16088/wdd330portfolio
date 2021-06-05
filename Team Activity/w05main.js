@@ -1,0 +1,1 @@
+import hikes from './w05hikes'
