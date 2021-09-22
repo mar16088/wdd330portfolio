@@ -4,7 +4,7 @@ window.onload = function () {
     const tableOfContents = [
         {
             label: 'Week 12',
-            url: '/WDD330Portfolio/week012/'
+            url: '/WDD330Portfolio/week12/'
         },
         {
             label: 'Week 11',
