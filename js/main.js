@@ -4,47 +4,47 @@ window.onload = function () {
     const tableOfContents = [
         {
             label: 'Week 12',
-            url: '/WDD330Portfolio/week12/'
+            url: '/week12/'
         },
         {
             label: 'Week 11',
-            url: '/WDD330Portfolio/week11/'
+            url: '/week11/'
         },
         {
             label: 'Week 10',
-            url: '/WDD330Portfolio/week10/'
+            url: '/week10/'
         },
         {
             label: 'Week 09',
-            url: '/WDD330Portfolio/week09/'
+            url: '/week09/'
         },
         {
             label: 'Week 08',
-            url: '/WDD330Portfolio/week08/'
+            url: '/week08/'
         },
         {
             label: 'Week 07',
-            url: '/WDD330Portfolio/week07/'
+            url: '/week07/'
         },
         {
             label: 'Week 05',
-            url: '/WDD330Portfolio/week05/'
+            url: '/week05/'
         },
         {
             label: 'Week 04',
-            url: '/WDD330Portfolio/week04/'
+            url: '/week04/'
         },
         {
             label: 'Week 03',
-            url: '/WDD330Portfolio/week03/'
+            url: '/week03/'
         },
         {
             label: 'Week 02',
-            url: '/WDD330Portfolio/week02/'
+            url: '/week02/'
         },
         {
             label: 'Week 01',
-            url: '/WDD330Portfolio/week01/'
+            url: '/week01/'
         }
     ];
 
