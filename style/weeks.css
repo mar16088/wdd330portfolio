@@ -1,21 +1,32 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: pink;
     padding-left: 2%;
 }
 
 h1 {
     text-align: left;
 }
-h3 {
+h2 {
     text-align: left;
 }
 
-h4 {
+.footer {
+    overflow: hidden;
+    background-color: olivedrab;
+}
+
+.left {
+    text-align: start;
+}
+
+.center {
+    
     text-align: center;
-    padding-top: 20%;
-    padding-bottom: 0%;
+}
+
+.right {
+    text-align: end;
 }
 
 a {
