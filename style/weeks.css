@@ -14,19 +14,13 @@ h2 {
 .footer {
     overflow: hidden;
     background-color: olivedrab;
+    text-decoration: none;
 }
 
-.left {
-    text-align: start;
-}
-
-.center {
-    
-    text-align: center;
-}
-
-.right {
-    text-align: end;
+.footer a {
+    float: left;
+    display: block;
+    color: snow;
 }
 
 a {

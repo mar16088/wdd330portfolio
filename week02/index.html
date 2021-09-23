@@ -3,15 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Week 02</title>
+    <title>Week 05</title>
 	<link rel='stylesheet' href='../style/weeks.css'>
 </head>
 
 <body>
 	<h1>Welcome to Week 02</h1>
     <h2>Team Assignment</h2>
-	<h3>Reading Notes</h3>
-	<h3>Reading Exercises</h3>
-    <a href="/index.html"><h4>Back to Main</h4></a>
+    <label for="userIn">#1</label>
+    <input type="text" id="userIn">
+    <button onclick="displayInput()">Enter</button>
+
+    <div id="output">
+    </div> 
+
+    <br>
+    <br>
+
+    <label for="">#2</label>
+    <input type="text" id="userIn3">
+    <button onclick="SeqAdd()">=</button>
+
+    <div id="out3"></div>
+
+    <br>
+    <br>
+
+    <label for="">#3</label>
+    <input type="text" id="userIn1">
+    <input type="text" id="userIn2">
+    <button onclick="addMachine()" id="add">+</button>
+    <button onclick="subMachine()" id="sub">-</button>
+    <button onclick="multiMachine()" id="multi">*</button>
+    <button onclick="divMachine()" id="div">/</button>
+
+    <div id="addMachineOut"></div>
+    
+    <h2>Reading Notes</h2>
+	<h2>Reading Exercises</h2>
+    
+    <div class="footer">
+        <ol id="footerLinks"></ol>
+        <script src="/week02/main.js"></script>
+    </div>
+    <script>
+        function displayInput(){
+            let input = document.getElementById('userIn').value;
+            
+            document.getElementById('output').innerHTML = input;
+        }
+
+        function SeqAdd() {
+            let inThree = document.getElementById('userIn3').value;
+            let total = 0;
+            for(let i = 0; i <= inThree; i++) {
+                total = add(i, total);
+                console.log('Total = ' + total);
+                console.log('i = ' + i);
+            }
+
+            document.getElementById('out3').innerHTML = total;
+        }
+
+        function parse(input) {
+            return parseInt(document.getElementById(input).value);
+
+        }
+
+        function calc(a, b, op) {
+            return op(a, b);
+        }
+
+        function add(a,b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function multi(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        function addMachine() {
+            let input1 = parse('userIn1');
+            let input2 = parse('userIn2');
+            let answer = calc(input1, input2, add);
+
+            document.getElementById('addMachineOut').innerHTML = answer;
+        }
+
+        function subMachine() {
+            let input1 = parse('userIn1');
+            let input2 = parse('userIn2');
+            let answer = calc(input1, input2, sub);
+
+            document.getElementById('addMachineOut').innerHTML = answer;
+        }
+
+        function multiMachine() {
+            let input1 = parse('userIn1');
+            let input2 = parse('userIn2');
+            let answer = calc(input1, input2, multi);
+
+            document.getElementById('addMachineOut').innerHTML = answer;
+        }
+        
+        function divMachine() {
+            let input1 = parse('userIn1');
+            let input2 = parse('userIn2');
+            let answer = calc(input1, input2, div);
+
+            document.getElementById('addMachineOut').innerHTML = answer;
+        }
+    </script>
 </body>
+
 </html>
