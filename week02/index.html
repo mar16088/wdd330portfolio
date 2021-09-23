@@ -8,19 +8,25 @@
 </head>
 
 <body>
-	<h1>Welcome to Week 02</h1>
+    <div class="header">
+        <h1>Welcome to Week 02</h1>
+        <div class="headerRight"></div>
+        <a href="./index.html">Home</a>
+
+    </div>
     <h2>Team Assignment</h2>
-    <label for="userIn">#1</label>
+    <h4>By: Erin Martinez, Donny Hayes, Cara Agard, Glory Ozonuwe, snd Rafael Falkenstein</h4>
+    
+    <h3>Core Requirement 01</h3>
     <input type="text" id="userIn">
     <button onclick="displayInput()">Enter</button>
 
-    <div id="output">
-    </div> 
+    <div id="output"></div> 
 
     <br>
     <br>
 
-    <label for="">#2</label>
+    <h3>Core Requirement 02</h3>
     <input type="text" id="userIn3">
     <button onclick="SeqAdd()">=</button>
 
@@ -29,6 +35,7 @@
     <br>
     <br>
 
+    <h3>Core Requirement 03 + Stretch Goal 01</h3>
     <label for="">#3</label>
     <input type="text" id="userIn1">
     <input type="text" id="userIn2">
@@ -65,19 +72,23 @@
             document.getElementById('out3').innerHTML = total;
         }
 
+        // Stretch Goal 02
         function parse(input) {
             return parseInt(document.getElementById(input).value);
 
         }
 
+        //Stretch Goal 03
         function calc(a, b, op) {
             return op(a, b);
         }
 
+        // Core Requirement 02
         function add(a,b) {
             return a + b;
         }
 
+        //Stetch Goal 01
         function sub(a, b) {
             return a - b;
         }

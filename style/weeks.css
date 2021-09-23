@@ -11,6 +11,23 @@ h2 {
     text-align: left;
 }
 
+.header {
+    overflow: hidden;
+    background-color: olivedrab;
+    color: linen;
+}
+
+.headerRight {
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
 .footer {
     overflow: hidden;
     background-color: olivedrab;
