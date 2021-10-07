@@ -4,12 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Week 04</title>
-	<link rel='stylesheet' href='../style/weeks.css'>
+	<link rel='stylesheet' href='../week04/style.css'>
 </head>
 
 <body>
 	<h1>Welcome to Week 04</h1>
     <h2>Team Assignment</h2>
+    <h3>Tic Tac Toe</h3>
+    <h4>This game uses touchscreen</h4>
+     <!--div class="board-cont">
+        <table>
+            <tr>
+                <td ontouchend="play(this)"></td>
+                <td ontouchend="play(this)"></td>
+                <td ontouchend="play(this)"></td>
+            </tr>
+            <tr>
+                <td ontouchend="play(this)"> </td>
+                <td ontouchend="play(this)"> </td>
+                <td ontouchend="play(this)"></td>
+            </tr>
+            <tr>
+                <td ontouchend="play(this)"> </td>
+                <td ontouchend="play(this)"> </td>
+                <td ontouchend="play(this)"></td>
+            </tr>
+        </table>
+        <button onclick="reset()" id="reset">Reset Game</button>
+        <h2 id="message">New Game - Player #1 starts playing</h2>
+    </div-->
+
+    <div class="grid">
+        <div class="cell" id="cell0" ontouchend="play(this)"></div>
+        <div class="cell" id="cell1" ontouchend="play(this)"></div>
+        <div class="cell" id="cell2" ontouchend="play(this)"></div>
+        <div class="cell" id="cell3" ontouchend="play(this)"></div>
+        <div class="cell" id="cell4" ontouchend="play(this)"></div>
+        <div class="cell" id="cell5" ontouchend="play(this)"></div>
+        <div class="cell" id="cell6" ontouchend="play(this)"></div>
+        <div class="cell" id="cell7" ontouchend="play(this)"></div>
+        <div class="cell" id="cell8" ontouchend="play(this)"></div>
+        <button id="reset" onclick="reset()">Reset</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        const player1 = "X";
+        const player2 = "O";
+        let player = player1;
+
+
+
+
+        function play(id) {
+            document.getElementById('output').innerHTML = "";
+            if (!id.innerHTML) {
+                id.innerHTML = player;
+                changePlayer();
+            }
+            /*if (document.getElementById('cell0').innerHTML == "X" && document.getElementById('cell1').innerHTML == "X" && document.getElementById('cell1').innerHTML == "X") {
+                alert("You win!");
+            }*/
+            let win = 0;
+            if ((document.getElementById('cell0').innerHTML == document.getElementById('cell1').innerHTML && document.getElementById('cell0').innerHTML == document.getElementById('cell2').innerHTML) && (document.getElementById('cell0').innerHTML)) {
+                if (document.getElementById('cell0').innerHTML == "X") {
+                    document.getElementById('output').innerHTML = "Player #1 Win!!";
+                } else {
+                    document.getElementById('output').innerHTML = "Player #2 Win!!";
+                }
+                win = 1;
+                reset()
+            } else if ((document.getElementById('cell3').innerHTML == document.getElementById('cell4').innerHTML && document.getElementById('cell3').innerHTML == document.getElementById('cell5').innerHTML) && (document.getElementById('cell3').innerHTML)) {
+                if (document.getElementById('cell3').innerHTML == "X") {
+                    document.getElementById('output').innerHTML = "Player #1 Win!!";
+                } else {
+                    document.getElementById('output').innerHTML = "Player #2 Win!!";
+                }
+
+                /*win = 1;*/
+                reset()
+            }
+            if (document.getElementById('cell0').innerHTML && document.getElementById('cell1').innerHTML && document.getElementById('cell2').innerHTML && document.getElementById('cell3').innerHTML && document.getElementById('cell4').innerHTML && document.getElementById('cell5').innerHTML && document.getElementById('cell6').innerHTML && document.getElementById('cell7').innerHTML && document.getElementById('cell8').innerHTML && (win == 0)) {
+                document.getElementById('output').innerHTML = "It's a DRAW";
+                //reset()
+            }
+        }
+
+        document.getElementById('board').addEventListener('ontouchend');
+
+        function changePlayer() {
+            if (player == player1) {
+                player = player2;
+            } else {
+                player = player1;
+            }
+        }
+
+        function reset() {
+            document.querySelectorAll(".cell").forEach((cell) => (cell.textContent = ""));
+            //document.getElementById('output').innerHTML = "";
+        }
+    </script>
+
+
 	<h3>Reading Notes</h3>
 	<h3>Reading Exercises</h3>
     <a href="/index.html"><h4>Back to Main</h4></a>
