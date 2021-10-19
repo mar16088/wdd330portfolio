@@ -27,8 +27,12 @@ window.onload = function () {
             url: '/week07/'
         },
         {
+            label: 'To Do',
+            url: '/todo/index.html'
+        },
+        {
             label: 'Week 05',
-            url: '/week05/'
+            url: '/week05/index.html'
         },
         {
             label: 'Week 04',
