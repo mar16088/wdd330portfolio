@@ -87,6 +87,7 @@ form {
     color: white;
     font-size: 14pt;
     border: rgb(125, 90, 150);
+    margin-left: 5px;
 }
 
 #add-button {
