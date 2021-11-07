@@ -1,4 +1,7 @@
 import {Hikes} from './hikes.js';
+import {Comments} from './comments.js';
+
+const newComment = new Comments('hike');
 
 const hikeList = [new Hikes(
     "Bechler Falls",
@@ -55,8 +58,11 @@ function showHikeList() {
 function renderHikeList(hikes, parent) {
     hikes.forEach(hike => {
         parent.appendChild(renderOneHike(hike));
+        
+        newComment.showCommentsList();
     });
 }
+
 
 function renderOneHike(hike) {
   const item = document.createElement("li");
@@ -72,13 +78,15 @@ function renderOneHike(hike) {
                     <h3>Difficulty</h3>
                     <p>${hike.difficulty}</p>
                 </div>
+                <div>
+                    <ul class="allComments"></ul>
+                </div>
         </div>`;
-
+    // newComment.showCommentsList();
     item.addEventListener('click', () => {
         //console.log("click");
         getHikeByName(hike)
     }); 
-
   return item;
 }
 
@@ -86,7 +94,7 @@ function getHikeByName(hikeData) {
     const hikeListElement = document.getElementById("hikes");
 
     hikeListElement.innerHTML =`<div>
-        <h2>${hikeData.name}</h2>
+        <h2 class="hikeName">${hikeData.name}</h2>
         <div class="image">
             <img src="${imgBasePath}${hikeData.imgSrc}" alt="${hikeData.imgAlt}">
         </div>
@@ -106,9 +114,18 @@ function getHikeByName(hikeData) {
             <h3>Directions:</h3>
             <p>${hikeData.directions}</p>
         </div>
+        <div>
+            <ul class="allComments"></ul>
+        <div>
+        <form>
+            <textarea id="hikeComment" name="hikeComment"></textarea>
+            <input id="commentSubmit" type="button" value="Add Comment">
+        </form>
         <button class="BackButton">Return to List</button>
     </div>`;
 
+    document.querySelector('#commentSubmit').addEventListener('click', newComment.addComments.bind(newComment));
     document.querySelector('.BackButton').addEventListener('click', showHikeList);
-
-  }
+    newComment.showCommentsList();
+}
+  
