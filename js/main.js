@@ -4,27 +4,27 @@ window.onload = function () {
     const tableOfContents = [
         {
             label: 'Week 12',
-            url: '/week12/'
+            url: '/week12/index.html'
         },
         {
             label: 'Week 11',
-            url: '/week11/'
+            url: '/week11/index.html'
         },
         {
             label: 'Week 10',
-            url: '/week10/'
+            url: '/week10/index.html'
         },
         {
             label: 'Week 09',
-            url: '/week09/'
+            url: '/week09/index.html'
         },
         {
             label: 'Week 08',
-            url: '/week08/'
+            url: '/week08/index.html'
         },
         {
             label: 'Week 07',
-            url: '/week07/'
+            url: '/week07/index.html'
         },
         {
             label: 'To Do',
