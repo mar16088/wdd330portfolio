@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina&family=Montserrat&display=swap');
+html {
+    background-image: radial-gradient(white, rgb(222, 251, 251)); 
+}
+body {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .5);
+    color: rgb(37, 42, 42);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    padding: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Faustina', serif;
+    color: rgb(28, 70, 81);
+    text-align: center;
+}
+header h1{
+    font-size: 42px;
+}
+#location {
+    font-size: 36px;
+    margin-bottom: 2px;
+}
+#summary dl {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+#summary dd {
+    margin-left: 4px;
+    margin-right: 10px;
+}
+#tempContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#moreDetails {
+    display: flex;
+    justify-content: center;
+}
+#windContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#windContainer dd{
+    margin: 5px;
+}
+#dial {
+    width: 15px;
+    height: 25px;
+}
+dt {
+    font-weight: bold;
+}
+#tempF, #tempC{
+    font-size: 32px;
+}
+
+
+/* For large screens */
+@media only screen and (min-width: 823px) {
+    body {
+        width: 60%;
+    }
+    #summary dd {
+        margin-left: 4px;
+        margin-right: 14px;
+    }
+}

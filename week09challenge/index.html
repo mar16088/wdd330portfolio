@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>W09 Challenge</title>
+</head>
+<body>
+    <header>
+        <section id="page-header">
+            <h1>Weather Forecast</h1>
+        </section>
+    </header>
+    
+    <section id="status"></section>
+    <main id="main-content">
+        <section id="currentForecast">
+            <div id="summary">
+                <h1 id="location"></h1>
+                <dl>
+                    <dt>Latitude:</dt><dd id="latitude"></dd>
+                    <dt>Longitude:</dt><dd id="longitude"></dd>
+                </dl>
+                <div id="tempContainer">
+                    <div id="weatherIcon"><img src="css/weather.png" alt="Weather Icon"></div>
+                    <div id="tempBox">
+                        <div id="tempF"></div>
+                        <div id="tempC"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="moreDetails">
+                <dl>
+                    <dt>Wind Speed:</dt>
+                    <span id="windContainer">
+                        <dd>
+                            <img id="dial" src="css/pointer.png" alt="wind pointer">
+                        </dd>
+                        <dd id="windSpeed"></dd>
+                        <span id="windDirection"></span>
+                    </span>
+                    <dt>Humidity:</dt><dd id="humidity"></dd>
+                    <dt>Barometer:</dt><dd id="barometer"></dd>
+                    <dt>Visibility:</dt><dd id="visibility"></dd>        
+                </dl>
+            </div>
+        </section>
+    </main>
+</body>
+<script type="text/javascript" src="js/list.js"></script>
+<script type="text/javascript" src="js/weather.js"></script>
+</html>
