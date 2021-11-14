@@ -16,6 +16,10 @@ window.onload = function () {
         },
         {
             label: 'Week 09',
+            url: '/week09challenge/index.html'
+        },
+        {
+            label: 'Week 09',
             url: '/week09/index.html'
         },
         {
